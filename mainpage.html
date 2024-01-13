@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trail.in Registration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      width: 400px;
+      max-width: 90%;
+      margin: 20px;
+      padding: 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 2px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .suggestion {
+      margin-top: 4px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 16px;
+      color: #fff;
+    }
+
+    .login-link a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #thank-you {
+      display: none;
+      text-align: center;
+      color: #4caf50;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form id="registration-form" class="rounded-md shadow-md p-6">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Trail.in Registration</h2>
+
+    <label for="username" class="text-sm">Username:</label>
+    <input type="text" id="username" class="input" required placeholder="Enter your username">
+
+    <label for="email" class="text-sm">Email:</label>
+    <input type="email" id="email" class="input" required placeholder="Enter your email">
+    <p class="suggestion">Suggestion: user@example.com</p>
+
+    <label for="password" class="text-sm">Password:</label>
+    <input type="password" id="password" class="input" required placeholder="Enter your password">
+    <p class="suggestion">Suggestion: Use a mix of upper and lower case letters, numbers, and symbols.</p>
+
+    <button type="button" onclick="register()" class="mt-4 bg-green-500 text-white p-2 rounded-md">Register</button>
+  </form>
+
+  <div id="thank-you" class="text-green-500 text-2xl font-semibold mt-6">
+    <p>Thank you for registering with Trail.in!</p>
+  </div>
+
+  <script>
+    function register() {
+      // Implement registration logic here (e.g., send data to server, store in database)
+      // For simplicity, we'll just show the thank-you message
+      document.getElementById("registration-form").style.display = "none";
+      document.getElementById("thank-you").style.display = "block";
+    }
+  </script>
+</body>
+</html>
